@@ -1,13 +1,53 @@
-:root {
-  box-sizing: border-box;
-  font-size: 16px;
-  font-family: 'inconsolataregular', monospace, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-
 @font-face {
-  font-family: 'inconsolataregular';
-  src: url('fonts/inconsolata-variablefont_wdthwght-webfont.woff2') format('woff2'),
-       url('fonts/inconsolata-variablefont_wdthwght-webfont.woff') format('woff');
+  font-family: 'inconsolata_regular';
+  src: url('inconsolata-variablefont_wdthwght-webfont.woff2') format('woff2'),
+       url('inconsolata-variablefont_wdthwght-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
+
 }
+@font-face {
+  font-family: 'atkinson_hyper_legible';
+  src: url('/fonts/atkinsonhyperlegible-regular-webfont.woff2') format('woff2'),
+       url('/fonts/atkinsonhyperlegible-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+:root {
+  box-sizing: border-box;
+  font-family: 'atkinson_hyper_legible', sans-serif, 'Open Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue';
+  font-size: 16px;
+  color: #faf5ff;
+  background-color: #faf5ff;
+}
+h1 {
+  font-size: 3rem;
+}
+
+.grid-container {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 1fr 2fr;
+}
+
+.header-container {
+
+}
+
+.sidebar-nav-container {
+  background-color: #3b0764;
+  grid-column: 1;
+  grid-row: 1 / -1;
+}
+
+.main-content-container {
+
+}
+
+.aside-container {
+
+}
+
+
