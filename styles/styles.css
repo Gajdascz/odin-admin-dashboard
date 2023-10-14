@@ -1,12 +1,11 @@
+/* #region ROOT, DEFAULT STYLING, AND PAGE LAYOUT STRUCTURE SETTINGS START  */
 @font-face {
   font-family: 'atkinson_hyper_legible';
   src: url('/fonts/atkinsonhyperlegible-regular-webfont.woff2') format('woff2'),
        url('/fonts/atkinsonhyperlegible-regular-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
-
 }
-
 :root {
   box-sizing: border-box;
   font-family: 'atkinson_hyper_legible', sans-serif, 'Open Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue';
@@ -21,6 +20,7 @@
 body {
   background-color: var(--primary-color);
   color: var(--text-primary);
+  cursor: default;
 }
 h1 {
   font-size: 2rem;
@@ -39,33 +39,92 @@ a {
 a:hover {
   color: var(--text-link-hover);
 }
-
 .grid-container {
   display: grid;
   height: 100vh;
   grid-template-columns: 1fr 4fr;
   grid-template-rows: 1fr 5fr;
 }
+button {
+  cursor: pointer;
+}
+/* #endregion ROOT, DEFAULT STYLING, AND PAGE LAYOUT STRUCTURE SETTINGS END  */
 
+/* HEADER STRUCTURE, CONTENT, AND STYLING START */
 .header-container {
   background-color: var(--primary-color);
   color: var(--text-primary);
   grid-column: 2;
   grid-row: 1;
+  display: grid;
+  grid-template-rows: 1fr 2fr;
+  padding-left: 50px;
+  padding-right: 55px;
 }
-.search-icon {
+
+/* #region HEADER ROW 1 START */
+.header-row-1 {
+  display: grid;
+  grid-template-columns: 1fr max-content max-content max-content;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+}
+label[for="header-search"] {
+  grid-row: 1;
+  grid-column: 1;
+  display: grid;
+  grid-template-columns: min-content 1fr;
+}
+input#header-search {
+  background-color: var(--primary-accent);
+  border: none;
+  border-radius: 10px;
+  height: 30px;
+  max-width: 80%;
+}
+input#header-search:focus {
+  border: 2px solid var(--secondary-color);
+  color: var(--text-primary);
+  font-family: inherit;
+}
+.notifications-button {
+  grid-row: 1;
+  grid-column: 2;
+}
+.search-icon,
+.notifications-icon {
   width: 30px;
   fill: var(--text-primary);
 }
-.search-icon:hover {
+.search-icon:hover,
+.notifications-icon:hover {
   fill: var(--text-link-hover);
 }
-button.search-button {
+button.search-button,
+button.notifications-button {
   background-color: var(--primary-color);
   border: none;
   cursor: pointer;
 }
+.header-row-1-user-icon {
+  width: 40px;
+}
+.header-row-2-user-icon {
+  width: 80px;
+}
+/* #endregion HEADER ROW 1 END */
+/* #region HEADER ROW 2 START */
 
+/* #endregion HEADER ROW 2 END*/
+/* HEADER STRUCTURE, CONTENT, AND STYLING END */
+
+
+
+
+
+
+/* #region SIDEBAR NAVIGATION STYLING STRUCTURE AND CONTENT START */
 .sidebar-nav-container {
   background-color: var(--secondary-color);
   color: var(--primary-color);
@@ -134,19 +193,6 @@ button.search-button {
 .sidebar-nav-container > h1{
   padding-right: 25px;
 }
-.sidebar-nav-container > a {
-  color: var(--primary-color);
-  font-size: 1.5rem;
-  font-weight: bold;
-}
-.sidebar-nav-container > a:hover { 
-  color: var(--accent-color);
-}
-.sidebar-nav-container > h1,
-.sidebar-nav-container > a {
-  align-self: center;
-  justify-self: start;
-}
 .dashboard-h1 {
   grid-area: dashboard-h1;
 }
@@ -177,7 +223,20 @@ button.search-button {
 .privacy-link {
   grid-area: privacy-link;
 }
-
+.sidebar-nav-container > a {
+  color: var(--primary-color);
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.sidebar-nav-container > a:hover { 
+  color: var(--accent-color);
+}
+.sidebar-nav-container > h1,
+.sidebar-nav-container > a {
+  align-self: center;
+  justify-self: start;
+}
+/* #endregion SIDEBAR NAVIGATION STYLING STRUCTURE AND CONTENT END */
 
 
 
