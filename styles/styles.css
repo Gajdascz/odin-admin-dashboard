@@ -1,12 +1,4 @@
 @font-face {
-  font-family: 'inconsolata_regular';
-  src: url('inconsolata-variablefont_wdthwght-webfont.woff2') format('woff2'),
-       url('inconsolata-variablefont_wdthwght-webfont.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-
-}
-@font-face {
   font-family: 'atkinson_hyper_legible';
   src: url('/fonts/atkinsonhyperlegible-regular-webfont.woff2') format('woff2'),
        url('/fonts/atkinsonhyperlegible-regular-webfont.woff') format('woff');
@@ -19,15 +11,33 @@
   box-sizing: border-box;
   font-family: 'atkinson_hyper_legible', sans-serif, 'Open Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue';
   font-size: 16px;
-  color: #faf5ff;
-  background-color: #faf5ff;
+  --text-primary: #050235;
+  --primary-color: #faf5ff;
+  --primary-accent: #e6dbf0;
+  --secondary-color: #3b0764;
+  --text-link-hover: #160027;
+  --accent-color: #6f86ff;
+}
+body {
+  background-color: var(--primary-color);
+  color: var(--text-primary);
 }
 h1 {
-  font-size: 3rem;
+  font-size: 2rem;
+  font-weight: bold;
+  cursor: default;
 }
-
+h2 {
+  font-size: 1.75rem;
+  font-weight: bold;
+  color: var(--text-primary);
+}
 a {
-  color: #faf5ff;
+  color: var(--secondary-color);
+  text-decoration: none;
+}
+a:hover {
+  color: var(--text-link-hover);
 }
 
 .grid-container {
@@ -38,29 +48,143 @@ a {
 }
 
 .header-container {
-  background-color: red;
+  background-color: var(--primary-color);
+  color: var(--text-primary);
   grid-column: 2;
+  grid-row: 1;
 }
-.nav-icon {
-  height: 40px;
-  width: 40px;
+.search-icon {
+  width: 30px;
+  fill: var(--text-primary);
+}
+.search-icon:hover {
+  fill: var(--text-link-hover);
+}
+button.search-button {
+  background-color: var(--primary-color);
+  border: none;
+  cursor: pointer;
 }
 
 .sidebar-nav-container {
-  background-color: #3b0764;
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
   grid-column: 1;
   grid-row: 1 / -1;
+  display: grid;
+  padding-left: 25px;
+  gap: 25px 15px;
+  grid-template-columns: min-content 1fr;
+  grid-template-rows: min-content;
+  grid-auto-rows: min-content;
+  grid-template-areas:
+  "dashboard-icon dashboard-h1"
+  "home-icon home-link"
+  "profile-icon profile-link"
+  "messages-icon messages-link"
+  "history-icon history-link"
+  "tasks-icon tasks-link"
+  "communities-icon communities-link"
+  "... ..."
+  "... ..."
+  "settings-icon settings-link"
+  "support-icon support-link"
+  "privacy-icon privacy-link";
 }
-.side-bar-main-nav-links{
-  font-size: 2rem;
+.dashboard-icon {
+  grid-area: dashboard-icon;
+  width: 55px;
+  fill:#faf5ff;
+  align-self: center;
+  justify-self: start;
 }
+.nav-icon {
+  width: 30px;
+  fill: #faf5ff;
+  align-self: center;
+  justify-self: end;
+}
+.home-icon {
+  grid-area: home-icon;
+}
+.profile-icon {
+  grid-area: profile-icon;
+}
+.messages-icon {
+  grid-area: messages-icon;
+}
+.history-icon { 
+  grid-area: history-icon;
+}
+.tasks-icon { 
+  grid-area: tasks-icon;
+}
+.communities-icon { 
+  grid-area: communities-icon;
+}
+.settings-icon { 
+  grid-area: settings-icon;
+}
+.support-icon { 
+  grid-area: support-icon;
+}
+.privacy-icon { 
+  grid-area: privacy-icon;
+}
+.sidebar-nav-container > h1{
+  padding-right: 25px;
+}
+.sidebar-nav-container > a {
+  color: var(--primary-color);
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.sidebar-nav-container > a:hover { 
+  color: var(--accent-color);
+}
+.sidebar-nav-container > h1,
+.sidebar-nav-container > a {
+  align-self: center;
+  justify-self: start;
+}
+.dashboard-h1 {
+  grid-area: dashboard-h1;
+}
+.home-link {
+  grid-area: home-link;
+}
+.profile-link {
+  grid-area: profile-link;
+}
+.messages-link {
+  grid-area: messages-link;
+}
+.history-link {
+  grid-area: history-link;
+}
+.tasks-link {
+  grid-area: tasks-link;
+}
+.communities-link {
+  grid-area: communities-link;
+}
+.settings-link {
+  grid-area: settings-link;
+}
+.support-link {
+  grid-area: support-link;
+}
+.privacy-link {
+  grid-area: privacy-link;
+}
+
+
+
 
 .main-content-container {
-
-}
-
-.aside-container {
-
+  background-color: var(--primary-accent);
+  grid-column: 2;
+  grid-row: 2;
 }
 
 
