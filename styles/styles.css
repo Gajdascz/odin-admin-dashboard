@@ -15,7 +15,7 @@
   --primary-accent: #e6dbf0;
   --secondary-color: #3b0764;
   --text-link-hover: #160027;
-  --accent-color: #6f86ff;
+  --accent-color: #9EAEFF;
 }
 body {
   background-color: var(--primary-color);
@@ -50,7 +50,7 @@ button {
 }
 /* #endregion ROOT, DEFAULT STYLING, AND PAGE LAYOUT STRUCTURE SETTINGS END  */
 
-/* HEADER STRUCTURE, CONTENT, AND STYLING START */
+/* #region HEADER STRUCTURE, CONTENT, AND STYLING START */
 .header-container {
   background-color: var(--primary-color);
   color: var(--text-primary);
@@ -61,7 +61,6 @@ button {
   padding-left: 50px;
   padding-right: 55px;
 }
-
 /* #region HEADER ROW 1 START */
 .header-row-1 {
   display: grid;
@@ -115,14 +114,54 @@ button.notifications-button {
 }
 /* #endregion HEADER ROW 1 END */
 /* #region HEADER ROW 2 START */
+.header-row-2 {
+  grid-row: 2;
+  display: inline-grid;
+  font-weight: bold;
+  grid-template-columns: min-content max-content;
+  grid-template-rows: min-content max-content;
+}
+.header-row-2-user-icon {
+  grid-column: 1;
+  grid-row: 1 / -1;
+}
+.header-row-2 .user-greeting {
+  align-self: end;
+  grid-column: 2;
+  grid-row: 1;
+}
+.header-row-2 .user-name {
+  font-size: 1.2rem;
+  grid-column: 2;
+  grid-row: 2;
+}
 
+.header-btns {
+  padding-left: 50px;
+  gap: 10px;
+  grid-column: 3;
+  grid-row: 2;
+  display: grid;
+  grid-template-columns:  1fr 1fr max-content max-content max-content;
+  gap: 15px;
+  align-items: baseline;
+}
+.header-btns > button {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  border: 1px solid var(--text-primary);
+  border-radius: 15px;
+  min-width: 100px;
+  max-width: 125px;
+  padding: 10px;
+  justify-self: end;
+}
+.header-btns > button:hover {
+  color: var(--accent-color);
+  background-color: var(--text-link-hover);
+}
 /* #endregion HEADER ROW 2 END*/
-/* HEADER STRUCTURE, CONTENT, AND STYLING END */
-
-
-
-
-
+/* #endregion HEADER STRUCTURE, CONTENT, AND STYLING END */
 
 /* #region SIDEBAR NAVIGATION STYLING STRUCTURE AND CONTENT START */
 .sidebar-nav-container {
@@ -237,8 +276,6 @@ button.notifications-button {
   justify-self: start;
 }
 /* #endregion SIDEBAR NAVIGATION STYLING STRUCTURE AND CONTENT END */
-
-
 
 .main-content-container {
   background-color: var(--primary-accent);
