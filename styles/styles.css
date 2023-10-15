@@ -3,8 +3,8 @@
   font-family: 'atkinson_hyper_legible';
   src: url('/fonts/atkinsonhyperlegible-regular-webfont.woff2') format('woff2'),
        url('/fonts/atkinsonhyperlegible-regular-webfont.woff') format('woff')
-       url('fonts/atkinsonhyperlegible-regular-webfont.woff2') format('woff2'),
-       url('fonts/atkinsonhyperlegible-regular-webfont.woff') format('woff');
+       url('../fonts/atkinsonhyperlegible-regular-webfont.woff2') format('woff2'),
+       url('../fonts/atkinsonhyperlegible-regular-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
