@@ -52,8 +52,6 @@ a:hover {
 button {
   cursor: pointer;
 }
-
-
 .grid-container {
   display: grid;
   height: 100vh;
@@ -342,6 +340,7 @@ button.notifications-button {
   fill: #1b191d;
   width: 30px;
 }
+
 .project-card-icon:hover {
   fill: var(--secondary-color);
 }
